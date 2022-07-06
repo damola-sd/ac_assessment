@@ -1,0 +1,50 @@
+.container {
+    padding: 2rem 14rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+.textContent {
+    letter-spacing: 2px;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding: 30px 40px;
+    margin-top: 2rem;
+}
+
+.bottomSection > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomSection > div > div > h1 {
+    margin-bottom: 0
+}
+
+.bottomSection > div > div > p {
+    color: #999999;
+}
+
+.bottomSection > div > div {
+    margin-left: 1rem;
+} 
+
+@media (max-width: 768px) {
+    .bottomSection {
+        flex-direction: column;
+    }
+
+    .bottomSection > div {
+        margin-bottom: 1rem;
+    }
+}

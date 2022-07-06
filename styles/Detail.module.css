@@ -1,0 +1,57 @@
+.container {
+    padding: 2rem 14rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+.innerContainer {
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .innerContainer {
+        flex-direction: column;
+    }
+}
+
+.innerContainer > div {
+    width: 50%;
+}
+
+@media (max-width: 768px) {
+    .innerContainer > div {
+        width: 100%;
+    }
+}
+
+.carImage {
+    border-radius: 4px;
+}
+
+.innerContainer > div:last-child {
+    margin-left: 2rem;
+    font-size: 1.2rem;
+}
+
+.innerContainer > div:last-child > div {
+    margin-bottom: 2rem;
+}
+
+@media (max-width: 768px) {
+    .innerContainer > div:last-child {
+        margin-left: 0;
+        font-size: 1rem;
+    }
+    .innerContainer > div:last-child > div {
+        margin-bottom: 1rem;
+    }
+}
+
+.carName {
+    font-size: 3rem;
+}

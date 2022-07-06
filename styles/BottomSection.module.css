@@ -1,0 +1,86 @@
+.container {
+    background: #333333;
+    padding: 2rem 14rem;
+    display: flex;
+    color: #BDBDBD;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+        flex-direction: column;
+    }
+}
+
+.headers {
+    color: #fff;
+}
+
+.container > div {
+    width: 25%;
+}
+
+.each > p:hover {
+    color: #F45C5D;
+    transition: 1s ease-in-out;
+    cursor: pointer;
+}
+
+.eachInner {
+    display: flex;
+}
+
+.eachInner > p {
+    margin-left: 10px;
+}
+
+.order {
+    font-size: 18px;
+}
+
+.productSearch {
+    display: flex;
+    padding-bottom: 12px;
+}
+
+.productSearch > input {
+    margin-right: 8px;
+    border: none;
+    outline: none;
+    padding: 10px
+}
+
+.productSearch > div {
+    background: #F45C5D;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    cursor: pointer;
+    transition: .5s;
+    color: #fff;
+}
+
+.productSearch > div:hover {
+    background: #0879C9;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons > div {
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    .headers {
+        width: 200px;
+    }
+    .each > p {
+        width: 200px;
+    }
+    .eachInner {
+        width: 200px;
+    }
+}

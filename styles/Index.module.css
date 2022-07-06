@@ -1,0 +1,273 @@
+.mainBrand {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 14rem 8rem 14rem;
+}
+
+@media (max-width: 768px) {
+    .mainBrand {
+        flex-direction: column;
+        padding: 0;
+    }
+}
+
+.productHeader {
+    text-shadow: gray 4px 4px 8px;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.eachChar {
+    color: #0879C9;
+    font-size: 2.5rem;
+}
+
+.carSection {
+    width: 68%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+.carsContainer {
+    margin: 10px;
+    margin-bottom: 2rem;
+    text-align: center;
+    width: 200px;
+}
+
+.priceSection {   
+    background: #F9F9F9;
+    width: 30%;
+    padding: 3rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .carSection {
+        width: 100%;
+    }
+    .priceSection {
+        width: 100%;
+    }
+}
+
+.viewDetails {
+    background: #0879C9;
+    border-radius: 6px;
+    color: #fff;
+    padding: 12px;
+    transition: .5s;
+}
+
+.viewDetails:hover {
+    background: #000000;
+}
+
+.productSearch {
+    display: flex;
+    padding-bottom: 12px;
+    border-bottom: 1px solid lightgrey;
+}
+
+.priceSection > h2 {
+    color: #f58586;
+}
+
+.productSearch > input {
+    margin-right: 8px;
+    border: none;
+    outline: none;
+    padding: 10px
+}
+
+.productSearch > div {
+    background: #0879C9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.productSearch > div:hover {
+    background: #000000;
+}
+
+.underPrice {
+    border-bottom: 1px solid lightgrey;
+}
+
+.checkLabel {
+    margin-left: 10px;
+}
+
+.separator {
+    height: 10px;
+}
+
+.form {
+    border-bottom: 1px solid lightgrey;
+}
+
+.parallax {
+    display: flex;
+    justify-content: space-between;
+    padding: 5rem 14rem
+}
+
+.parallax > div > div > h3 {
+    color: red;
+}
+
+.parallax > div {
+    width: 48%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    background: #EFEDEE;
+    border-radius: 4px;
+    padding: 4rem 2rem;
+}
+
+@media (max-width: 768px) {
+    .parallax {
+        flex-direction: column;
+        padding: 2rem;
+    }
+    .parallax > div {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 4px;
+        padding: 2rem;
+        margin-bottom: 4rem;
+    }
+}
+
+
+.container {
+    padding: 2rem 14rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 2rem;
+    }
+}
+
+.textContent {
+    letter-spacing: 2px;
+}
+
+.bottomSection {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding: 30px 40px;
+    margin-top: 2rem;
+}
+
+.bottomSection > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottomSection > div > div > h1 {
+    margin-bottom: 0
+}
+
+.bottomSection > div > div > p {
+    color: #999999;
+}
+
+.bottomSection > div > div {
+    margin-left: 1rem;
+} 
+
+@media (max-width: 768px) {
+    .bottomSection {
+        flex-direction: column;
+    }
+
+    .bottomSection > div {
+        margin-bottom: 1rem;
+    }
+}
+
+.styles {
+    text-align: center;
+}
+
+.html {
+    height: 500;
+}
+
+.insideStyles {
+background: white;
+   padding: 20;
+   position: "absolute";
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #F8F9FA;
+    padding: 0 14rem;
+}
+
+.menu {
+    background: #F8F9FA;
+    width: 40%;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0;
+    }
+    .container > div {
+        margin-left: 1rem;
+    }
+    .menu {
+        width: 25%;
+    }
+}
+
+
+.footer {
+    background: #0879C9;
+    text-align: center;
+    color: #fff;
+    padding: 1.2rem;
+}
+
+
+.bottom {
+    padding: 2rem 14rem;
+    display: flex;
+    background: #EEEEEE;
+}
+
+.bottom > div:first-child {
+    color: #F45C5D;
+    cursor: pointer;
+}
+
+.bottom > div {
+    margin-right: 1rem;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    .bottom {
+        padding: 1rem 2rem;
+    }
+}
