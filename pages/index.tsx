@@ -11,20 +11,28 @@ import BottomSection from "../components/BottomSection";
 
 import { FaChevronRight } from "react-icons/fa";
 
-import { CarBrand, Car } from "../utils/types";
+import {
+  CarBrand,
+  Car,
+  GetAllCarsResults,
+  GetPopularMakesResults,
+} from "../utils/types";
 
 import styles from "../styles/Home.module.css";
 import carSample from "../public/images/car_sample.jpg";
 import carSample1 from "../public/images/car_sample_1.jpg";
 import carSample2 from "../public/images/car_sample_2.jpg";
+import carBg from "../public/images/car-bg.jpg";
+import Pagination from "@etchteam/next-pagination";
 
 import { baseUrl } from "../utils/base";
 
-const Home: NextPage<{ brands: CarBrand[]; cars: Car[] }> = ({
-  brands,
-  cars,
-}) => {
-  // console.log("brands", brands);
+const Home: NextPage<{
+  brands: CarBrand[];
+  cars: Car[];
+  totalCount: number;
+}> = ({ brands, cars, totalCount }) => {
+  console.log("brands", totalCount);
 
   return (
     <div className={styles.container}>
@@ -52,14 +60,28 @@ const Home: NextPage<{ brands: CarBrand[]; cars: Car[] }> = ({
                 width="200"
                 height="200"
               />
+              <span className="text-slate-500">{result.sellingCondition}</span>
               <a>
                 <h3>
                   {result.title.length > 20
-                    ? `${result.title.substring(0, 20)}...`
-                    : result.title}
+                    ? `${result.title.substring(0, 20)}...(${result.year})`
+                    : `${result.title} (${result.year})`}
                 </h3>
               </a>
-              <h3>{result.year}</h3>
+              <div className="flex text-xs space-x-4 m-2">
+                <span className="text-slate-500">
+                  {(result.city + "," + result.state).length > 12
+                    ? `${result.state}`
+                    : `${result.city}, ${result.state}`}
+                </span>
+
+                <span className="text-slate-500">
+                  {new Intl.NumberFormat("en-US", {
+                    style: "currency",
+                    currency: "NGN",
+                  }).format(result.marketplacePrice)}
+                </span>
+              </div>
               <Link href={`/cars/${result.id}`}>
                 <a>
                   <h3 className={styles.viewDetails}>VIEW DETAILS</h3>
@@ -67,6 +89,9 @@ const Home: NextPage<{ brands: CarBrand[]; cars: Car[] }> = ({
               </Link>
             </div>
           ))}
+          <div className="mb-2">
+            <Pagination total={totalCount} />
+          </div>
         </div>
         <div className={styles.priceSection}>
           <h2>Search Here</h2>
@@ -161,9 +186,9 @@ const Home: NextPage<{ brands: CarBrand[]; cars: Car[] }> = ({
         <div className={styles.parallax}>
           <div>
             <div>
-              <h3>Expensive, Rich & Blazing Fast</h3>
-              <h1>Branded Headphones</h1>
-              <h4>Sale up to 25% off all in store</h4>
+              <h3>Expensive, Sleek & Blazing Fast</h3>
+              <h1>SuperCars</h1>
+              <h4>Sale up to 25% off all in store location</h4>
             </div>
             <div>
               <Image
@@ -177,9 +202,9 @@ const Home: NextPage<{ brands: CarBrand[]; cars: Car[] }> = ({
           </div>
           <div>
             <div>
-              <h3>A Bigger Phone</h3>
-              <h1>Smart Phones 5</h1>
-              <h4>Free shipping order over $100</h4>
+              <h3>Solid, All-Weather, Sporty</h3>
+              <h1>SUVs</h1>
+              <h4>Free shipping on orders</h4>
             </div>
             <div>
               <Image
@@ -214,6 +239,7 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
     props: {
       cars: carsData.result,
       brands: brandsData.makeList,
+      totalCount: carsData.pagination.total,
     },
   };
 };
