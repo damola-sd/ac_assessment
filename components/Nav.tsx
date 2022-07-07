@@ -48,7 +48,13 @@ function Nav() {
 
       <div className={styles.bottomSection}>
         <Link href="/" passHref>
-          <Image src={logo} alt="Logo" width="180" height="60" />
+          <Image
+            className="mx-4"
+            src={logo}
+            alt="Logo"
+            width="150"
+            height="60"
+          />
         </Link>
         <div className={styles.inputContainer}>
           <div className={styles.inputContainerInner}>

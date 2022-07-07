@@ -32,8 +32,6 @@ const Home: NextPage<{
   cars: Car[];
   totalCount: number;
 }> = ({ brands, cars, totalCount }) => {
-  // console.log("brands", totalCount);
-
   return (
     <div className={styles.container}>
       <Head>
@@ -44,7 +42,6 @@ const Home: NextPage<{
       <Nav />
 
       <h1 className={styles.productHeader}>
-        <span className={styles.eachChar}>O</span>ur{" "}
         <span className={styles.eachChar}>N</span>ew{" "}
         <span className={styles.eachChar}>C</span>ars
       </h1>
@@ -68,7 +65,7 @@ const Home: NextPage<{
                     : `${result.title} (${result.year})`}
                 </h3>
               </a>
-              <div className="flex text-xs space-x-2 m-2">
+              <div className="flex text-xs space-x-3 m-2">
                 <span className="text-slate-500">
                   {(result.city + "," + result.state).length > 12
                     ? `${result.state}`

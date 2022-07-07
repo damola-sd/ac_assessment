@@ -18,8 +18,7 @@ import {
 } from "pure-react-carousel";
 import { CarMedia } from "../../utils/types";
 
-function DetailsPage({ car, media }: any) {
-  console.log(car);
+function DetailsPage({ car, media }: any): ReactNode {
   return (
     <>
       <Head>
@@ -38,13 +37,66 @@ function DetailsPage({ car, media }: any) {
               height="500"
             />
           </div>
-          <div>
-            <div className={styles.carName}>{car.carName}</div>
+          <div className="md:container flex flex-col">
+            <h2>{`${car.exteriorColor} ${car.carName}`}</h2>
+            <div className="text-lg font-bold text-red-500">
+              {new Intl.NumberFormat("en-US", {
+                style: "currency",
+                currency: "NGN",
+              }).format(car.marketplacePrice)}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Engine Type: </span>
+              {car.engineType}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Location: </span>
+              {`${car.city},${car.state}`}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Mileage: </span>
+              {car.mileage}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">VIN: </span>
+              {car.vin}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Transmission: </span>
+              {car.transmission.toUpperCase()}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Warranty: </span>
+              {car.hasWarranty ? "Yes" : "No"}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Financing: </span>
+              {car.hasFinancing ? "Yes" : "No"}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Insured: </span>
+              {car.insured ? "Yes" : "No"}
+            </div>
+            <div className="text-sm">
+              {" "}
+              <span className="font-bold">Inspected By: </span>
+              {car.inspectorDetails.inspectorFullName}
+            </div>
+
+            {/* <div className={styles.carName}>{car.carName}</div>
             <div>Engine Type: {car.engineType}</div>
             <div>Exterior Color: {car.exteriorColor}</div>
             <div>Fuel Type: {car.fuelType}</div>
             <div>State: {car.state}</div>
-            <div>Year: {car.year}</div>
+            <div>Year: {car.year}</div> */}
           </div>
         </div>
         <h3>Media</h3>
