@@ -32,7 +32,7 @@ const Home: NextPage<{
   cars: Car[];
   totalCount: number;
 }> = ({ brands, cars, totalCount }) => {
-  console.log("brands", totalCount);
+  // console.log("brands", totalCount);
 
   return (
     <div className={styles.container}>
@@ -68,7 +68,7 @@ const Home: NextPage<{
                     : `${result.title} (${result.year})`}
                 </h3>
               </a>
-              <div className="flex text-xs space-x-4 m-2">
+              <div className="flex text-xs space-x-2 m-2">
                 <span className="text-slate-500">
                   {(result.city + "," + result.state).length > 12
                     ? `${result.state}`

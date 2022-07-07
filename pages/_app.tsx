@@ -4,6 +4,7 @@ import { NextPage } from "next";
 import { ReactElement, ReactNode } from "react";
 import "antd/dist/antd.css";
 import "@etchteam/next-pagination/dist/index.css";
+import "pure-react-carousel/dist/react-carousel.es.css";
 
 type NextPageWithLayout = NextPage & {
   getLayout?: (page: ReactElement) => ReactNode;

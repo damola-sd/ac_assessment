@@ -3,6 +3,14 @@ export interface GetPopularMakesResults {
     pagination: Info
 }
 
+export interface CarMedia {
+    id: number;
+    name: string;
+    url: string;
+    createdAt: string;
+    type: string;
+}
+
 export interface CarBrand {
     id: number;
     name: string;

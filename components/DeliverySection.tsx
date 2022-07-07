@@ -7,12 +7,11 @@ import { IoMdCart } from "react-icons/io";
 function DeliverySection() {
   return (
     <div className={styles.container}>
-      <h2>Electronics:</h2>
+      <h2>Vehicles:</h2>
       <p className={styles.textContent}>
-        If you are considering a new car, we make it easy to find exactly what
-        you need at a price you can afford. We offer Every Day Low Prices on on
-        different brand of cars ranging from Toyota, Mercedes Benz, Audi, BMW,
-        Honda, Hyundai, Jaguar, Kia, Land Rover, Nissan and many more.
+        Search our inventory of over 5000 pre-inspected vehicles and select your
+        preferred brand, model and year. Read through the inspection report
+        which shows pictures, electrical and mechanical state of the car.
       </p>
       <div className={styles.bottomSection}>
         <div>
