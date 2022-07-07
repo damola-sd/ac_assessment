@@ -37,7 +37,7 @@ function DetailsPage({ car, media }: any): ReactNode {
               height="500"
             />
           </div>
-          <div className="md:container flex flex-col">
+          <div className=" flex flex-col">
             <h2>{`${car.exteriorColor} ${car.carName}`}</h2>
             <div className="text-lg font-bold text-red-500">
               {new Intl.NumberFormat("en-US", {
@@ -52,13 +52,18 @@ function DetailsPage({ car, media }: any): ReactNode {
             </div>
             <div className="text-sm">
               {" "}
+              <span className="font-bold">Fuel Type: </span>
+              {car.fuelType}
+            </div>
+            <div className="text-sm">
+              {" "}
               <span className="font-bold">Location: </span>
               {`${car.city},${car.state}`}
             </div>
             <div className="text-sm">
               {" "}
               <span className="font-bold">Mileage: </span>
-              {car.mileage}
+              {`${car.mileage}${car.mileageUnit}`}
             </div>
             <div className="text-sm">
               {" "}
