@@ -8,6 +8,11 @@
 		"start": "next start",
 		"lint": "next lint"
 	},
+	"engines": {
+		"node": "14.x",
+		"npm": "8.x",
+		"yarn": "1.x"
+	},
 	"dependencies": {
 		"@etchteam/next-pagination": "^3.5.4",
 		"antd": "^4.21.5",
