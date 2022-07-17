@@ -37,7 +37,9 @@ const Home: NextPage<{
       <Head>
         <title>AutoChek Car Sales</title>
         <meta name="description" content="Autochek Car Sales" />
-        <link rel="icon" href="/favicon.ico" />
+        <Link href={`/`}>
+          <link rel="icon" href="/favicon.ico" />
+        </Link>
       </Head>
       <Nav />
 
