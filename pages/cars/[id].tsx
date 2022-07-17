@@ -73,7 +73,7 @@ function DetailsPage({ car, media }: any): ReactNode {
             <div className="text-sm">
               {" "}
               <span className="font-bold">Transmission: </span>
-              {car.transmission.toUpperCase()}
+              {car.transmission?.toUpperCase()}
             </div>
             <div className="text-sm">
               {" "}
@@ -93,7 +93,7 @@ function DetailsPage({ car, media }: any): ReactNode {
             <div className="text-sm">
               {" "}
               <span className="font-bold">Inspected By: </span>
-              {car.inspectorDetails.inspectorFullName}
+              {car.inspectorDetails?.inspectorFullName}
             </div>
 
             {/* <div className={styles.carName}>{car.carName}</div>
